@@ -80,11 +80,8 @@ em{font-style:normal;color:var(--lime)}
 .playbtn{position:absolute;z-index:3;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:var(--lime);color:var(--black);display:flex;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(198,244,50,.5);transition:transform .2s}
 .playbtn:hover{transform:scale(1.08)}
 .playbtn svg{width:30px;height:30px;fill:currentColor;margin-left:4px}
-.chip{position:absolute;z-index:2;background:var(--black);border:1px solid var(--lime);color:var(--lime);border-radius:999px;padding:.35em 1em;font-size:.82rem;font-weight:600;animation:float 5s ease-in-out infinite}
-.c1{top:-10px;left:6px}.c2{bottom:14%;right:-6px;animation-delay:-1.6s}.c3{bottom:-12px;left:12%;animation-delay:-3.2s}
-@keyframes float{50%{transform:translateY(-8px)}}
 @media(min-width:640px){.cta-row{flex-direction:row;flex-wrap:wrap}}
-@media(min-width:980px){.hero{padding:140px 0 80px}.hero-grid{grid-template-columns:1fr 1.1fr}.c1{left:-14px}.c2{right:-14px}}
+@media(min-width:980px){.hero{padding:140px 0 80px}.hero-grid{grid-template-columns:1fr 1.45fr;gap:36px}}
 
 /* números */
 .numbers{border-block:1px solid var(--line);background:var(--l1)}
