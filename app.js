@@ -44,14 +44,18 @@ const FAQ = [
     ? 'Sim, há instalador para Mac e para Windows.'
     : 'Há instalador para Mac. A versão para Windows está em validação — fale com a gente antes de comprar se você usa Windows.'],
   ['Preciso de internet?', 'Para baixar o aplicativo e ativar a chave na primeira vez, sim. Depois de ativado, o Campo Tático continua funcionando sem internet.'],
-  ['Onde ficam as minhas táticas?', 'No seu computador. Você também pode salvar e abrir táticas em arquivo.'],
+  ['Onde ficam as minhas táticas?', 'No seu computador. Com Salvar tática e Abrir tática você também guarda cada tática em arquivo.'],
   ['Como recebo o produto?', 'Logo após o pagamento você recebe um e-mail com o link para baixar o aplicativo e a sua chave de ativação.'],
+  ['Como instalo no Windows?', 'Dê dois cliques no arquivo Campo-Tatico-Windows.exe: o aplicativo se instala sozinho e abre. O instalador ainda não tem assinatura digital paga; se aparecer “O Windows protegeu o computador”, clique em “Mais informações” e depois em “Executar assim mesmo”.'],
+  ['Como instalo no Mac?', 'Abra o arquivo .dmg e arraste o Campo Tatico para a pasta Aplicativos. O aplicativo ainda não tem assinatura paga da Apple; se o Mac bloquear na primeira abertura, feche o aviso (sem mover para o Lixo), vá em Ajustes do Sistema > Privacidade e Segurança, role até Segurança e clique em “Abrir Mesmo Assim”. O botão fica disponível por cerca de uma hora. Em um Mac mais antigo, clique no aplicativo com o botão direito e escolha Abrir.'],
   ['Para que serve a chave de ativação?', 'Você digita a chave na primeira vez que abrir o aplicativo. Ela é pessoal e fica vinculada ao seu computador. Guarde o e-mail com cuidado.'],
   ['Posso trocar de computador?', 'Pode. No computador antigo, abra Arquivo > Desativar este computador e depois digite a chave no novo. Se perder o acesso ao antigo, fale com a gente.'],
   ['Como posso pagar?', 'Por Pix ou cartão de crédito (em até 3x). Não há boleto, porque a chave é enviada assim que o pagamento é aprovado.'],
   ['Tem mensalidade?', 'Não. O pagamento é único.'],
-  ['Posso usar a logo do meu clube?', 'Pode. Envie a imagem e o fundo é removido automaticamente.'],
-  ['Consigo gerar vídeo da jogada?', 'Sim. Você cria os frames e exporta a animação em MP4, além de imagem PNG.'],
+  ['Posso usar a logo do meu clube?', 'Pode. Clique em Escolher logo, envie a imagem e o fundo é removido automaticamente.'],
+  ['Consigo gerar vídeo da jogada?', 'Sim. Em Animação você cria os frames e usa Baixar vídeo para exportar em MP4. Para imagem, use Baixar PNG.'],
+  ['O que dá para desenhar no campo?', 'Seta, traço reto, tracejado, seta tracejada, quadrado, retângulo, triângulo e textos.'],
+  ['O campo é verde ou branco?', 'O aplicativo abre no gramado verde. A prancheta branca pode ser escolhida durante o uso.'],
   ['E as atualizações?', 'O Campo Tático abre a versão mais recente quando há internet.'],
   ['Preciso saber de informática?', 'Não. É só arrastar jogadores, bola e objetos.'],
   ['Quero tirar uma dúvida antes de comprar.', (SUPPORT_EMAIL ? `Fale com a gente: ${SUPPORT_EMAIL}.` : 'Fale com a gente pelo e-mail de suporte que aparece na página de compra.')]
@@ -128,7 +132,7 @@ $('#leadForm').addEventListener('submit', e => {
 
 const PAGES = {
   termos: ['Termos de uso', ['Texto provisório. Estes termos serão publicados antes da abertura das vendas.', 'O Campo Tático é um aplicativo para computador, vendido em pagamento único, com acesso entregue por e-mail.']],
-  privacidade: ['Política de privacidade', ['Texto provisório. A política completa será publicada antes da abertura das vendas.', 'O aplicativo salva seus dados no seu próprio computador e não os envia para a internet.']],
+  privacidade: ['Política de privacidade', ['Texto provisório. A política completa será publicada antes da abertura das vendas.', 'O Campo Tático salva suas táticas, fotos e logo no seu próprio computador e não as envia para a internet.', 'Para ativar, conferir a licença e buscar atualizações, o aplicativo envia ao servidor a chave e um código que identifica o computador.']],
   contato: ['Contato', [SUPPORT_EMAIL ? `Dúvidas? Fale com a gente: ${SUPPORT_EMAIL}.` : 'Dúvidas? Fale com a gente pelo e-mail de suporte que aparece na página de compra.']]
 };
 $$('[data-page]').forEach(b => b.addEventListener('click', () => {

@@ -136,12 +136,12 @@ em{font-style:normal;color:var(--lime)}
 .inline-cta{color:var(--lime);font-weight:700;white-space:nowrap}
 .inline-cta:hover{text-decoration:underline}
 .sim-pitch{position:relative;background:var(--black);border:1px solid var(--line2);border-radius:var(--r);padding:10px;box-shadow:0 0 70px rgba(198,244,50,.1)}
-.pf{fill:var(--black);stroke:var(--line)}
-.pl *{fill:none;stroke:rgba(255,255,255,.25);stroke-width:3}
+.pf{fill:#2f8f4e;stroke:var(--line)} /* gramado, como no aplicativo */
+.pl *{fill:none;stroke:rgba(255,255,255,.85);stroke-width:3}
 .pl{fill:none}
 #players g{transition:transform .9s cubic-bezier(.34,1.35,.5,1)}
-.pd{fill:var(--lime)}.pd.gk{fill:var(--white)}
-.pitch-tag{position:absolute;left:22px;bottom:18px;font-size:.78rem;color:var(--t50);font-weight:600}
+.pd{fill:#1d4ed8;stroke:var(--white);stroke-width:4}
+.pitch-tag{position:absolute;left:26px;bottom:22px;font-size:.78rem;color:var(--white);font-weight:700;background:rgba(11,11,12,.72);border-radius:999px;padding:.25em .75em}
 @media(min-width:900px){.sim{grid-template-columns:.9fr 1.1fr}}
 @media(prefers-reduced-motion:reduce){#players g{transition:none}}
 
@@ -164,9 +164,11 @@ em{font-style:normal;color:var(--lime)}
 .o .ac{stroke:var(--lime)}
 .o .fl{fill:rgba(255,255,255,.22)}
 .o .ac.fl{fill:rgba(198,244,50,.28)}
-.shot.tall{max-height:300px}.shot.tall img{object-position:top}
+.shot.tall,.shot.field{flex:none;min-height:0;margin-top:auto}.shot.tall img,.shot.field img{display:block;height:auto}
+.shot.tall{max-width:360px;width:100%;margin-inline:auto}
+.fcard .shot.field{margin-block:auto}.fcard:has(.shot.field) p{margin-bottom:20px}
 .shot.duo{display:grid;grid-template-columns:1fr 1fr;gap:6px;border:0;background:none}
-.shot.duo img{border-radius:12px;border:1px solid var(--line);aspect-ratio:16/10}
+.shot.duo img{border-radius:12px;border:1px solid var(--line);aspect-ratio:1696/1140;height:auto}
 .formations{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
 .formations span{border:1px solid var(--line2);border-radius:999px;padding:.35em .9em;font-size:.85rem;color:var(--t80)}
 .formations .hl{border-color:var(--lime);color:var(--lime)}
@@ -270,3 +272,4 @@ body.win-off [data-win="on"]{display:none}
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .reveal{opacity:1;transform:none}
 }
+[data-price-now],[data-price-old]{white-space:nowrap}
