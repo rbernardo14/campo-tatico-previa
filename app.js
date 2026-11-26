@@ -138,7 +138,10 @@ const PAGES = {
 $$('[data-page]').forEach(b => b.addEventListener('click', () => {
   const [t, ps] = PAGES[b.dataset.page];
   $('#pageTitle').textContent = t;
-  $('#pageBody').replaceChildren(...ps.map(x => Object.assign(document.createElement('p'), { textContent: x })));
+  $('#pageBody').replaceChildren(...ps.map(x => {
+    const h = x.startsWith('## ');
+    return Object.assign(document.createElement(h ? 'h4' : 'p'), { textContent: h ? x.slice(3) : x });
+  }));
   pageModal.showModal();
 }));
 
